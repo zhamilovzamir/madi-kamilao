@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Мәди-Кәмилә үйлену тойына шақыру!">
+    <meta property="og:description" content="15.08.2026">
+    <meta property="og:image" content="C:\Users\Acer\Desktop\madi_invite\madikam.png" >
+
+
+<link rel="stylesheet"  href="css.css">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мәди-Кәмилә үйлену тойына шақыру!</title> 
+
+
+
+
+
+<style>
+    
+
+
+@media screen and (max-width: 1280px) {div.contentblock {width: 1200px;} } 
+@media screen and (max-width: 1140px) { div.contentblock {width: 1024px;} } 
+@media screen and (max-width: 992px) { div.contentblock {width: 970px;} } 
+
+
+
+
+
+
+.element-animation{ 
+    top: 0px; 
+    opacity: 0; 
+    position: relative; 
+} 
+.element-animation.element-show{ 
+position: relative; 
+top: 20px; 
+opacity: 1; 
+transition-duration: 1.4s; 
+}
+
+
+
+
+
+
+
+
+
+.conteiner{
+
+  background-size: 100%;
+overflow: hide;
+width: 100%;
+   height: 50%;
+
+}
+.countdown-container {
+    margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 0.7rem;
+      font-weight: 200;
+      line-height: 1.0;
+      -webkit-text-size-adjust: 80%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+     background-color: none;
+}
+
+
+.countdown-item {
+      position: relative;
+      min-width: 40px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-bottom: 10px;
+}
+
+    .countdown:not(:last-child)::after {
+      content: ':';
+      position: absolute;
+      right: -15px;
+
+    }
+
+
+.countdown-item span {
+       display: block;
+    font-size: 32px;
+    margin-bottom: 1px;
+    color: #3F3F3F;
+    border-radius: 5px;
+    padding: 5px;
+    animation: pulse 1s ease infinite alternate;
+}
+
+
+
+
+
+
+
+      .form-inner {
+   position: relative;
+}
+
+}
+.form-inner label {
+   display: block;
+   padding-left: 15px;
+   font-family: 'Roboto', sans-serif;
+   color: rgba(255, 255, 255, .6);
+   text-transform: uppercase;
+   font-size: 15px;
+padding: 0 15px;
+   margin: 10px 0 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+
+  transition: transform 0.3s ease;
+}
+
+/* Стили для кнопки с эффектом при нажатии */
+.btn {
+  transform: scale(1.1); /* Увеличиваем кнопку при активации */
+}
+
+
+
+.form-inner textarea {
+   width: 80%;
+   text-align: center;
+   margin-top: 5px;
+ 
+   border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: #ffffff;
+    border-color: #1d3f57  0.5px;
+    letter-spacing: 0.11em;
+ height: 30px;
+   font-family: 'Roboto', sans-serif;
+  
+}
+
+.form-inner input[type="submit"] {
+    background: linear-gradient(to top left, #68805a 0%, #68805a 100%);
+       width: 80%;
+height: 30PX;
+text-align: center;
+    border: 0;
+    border-bottom: 2px  #aaa;
+       border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #FFFAF8  ;
+    letter-spacing: 0.11em;
+   font-family: 'Roboto', sans-serif;
+  padding: 0 15px;
+   margin: 10px 0 15px;
+
+}
+.radio-group{
+  text-align: left;
+  width: 80%;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #585856;
+  color: rgba(88, 88, 86, .7);
+}
+
+
+
+
+body {
+    background-color:#fffffa ;
+}
+
+</style>
+
+
+
+
+ <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+
+
+
+
+ <style>
+        /* Стили для модального окна */
+        .modal {
+            display: block; /* Модальное окно отображается сразу */
+            position: fixed;
+            z-index: 9999; /* Модальное окно поверх всех элементов */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Затемнённый фон */
+        }
+        .modal-content {
+            background-color: #fffffa;
+            margin: 30% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+        }
+        .kk{
+          width: 100%;
+          height: 100%;
+     }
+          button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #fffffa;
+            border-radius: 5px;
+            border-color: #000000;
+        }
+        /* Отключение скроллинга страницы */
+        body.modal-open {
+            overflow: hidden;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+
+
+<div class="fade-in" id="content">
+<img src="vdtj.jpg" style="width: 100%; height: 100%;" loading="eager">
+</div>
+
+
+<center>
+<div class="element-animation"> 
+<img src="hmjm.gif" style="width: 20%;">
+
+</div></center>
+
+
+
+
+
+<center>
+<div class="element-animation"> 
+
+
+<img src="C:\Users\Acer\Desktop\madi_invite\111.jpg" style="width: 100%; margin-top: 20px;">
+
+</div></center>
+
+
+
+
+
+<center>
+<div class="element-animation"> 
+<img src="C:\Users\Acer\Desktop\madi_invite\2.jpg" style="width: 100%; margin-top: 40px;">
+</div></center>
+
+
+
+
+
+<center>
+<div class="element-animation"> 
+<img src="C:\Users\Acer\Desktop\madi_invite\3.png" style="width: 100%;margin-top: 80px; margin-bottom: 20px;"  >
+
+</div></center>
+
+
+<center>
+<div class="countdown-container" style="margin-top:10px;">
+    <div class="countdown-item" style="margin-bottom: 30px;">
+        <span id="days"></span>
+        <span style="font-size: 13px;text-align: center;">күн</span>
+    </div><h2 style="margin-top:3px; size: 30px;">:</h2>
+    <div class="countdown-item">
+        <span id="hours"></span>
+        <span style="font-size: 13px;text-align: center;">сағат</span>
+    </div><h2 style="margin-top:3px; size: 30px;">:</h2>
+    <div class="countdown-item">
+        <span id="minutes"></span>
+        <span style="font-size: 13px;text-align: center;text-align: center;">минут</span>
+    </div><h2 style="margin-top:3px; size: 30px;">:</h2>
+    <div class="countdown-item">
+        <span id="seconds"></span>
+        <span style="font-size: 13px;text-align: center;">секунд</span>
+    </div>
+</div>
+
+</center>
+
+
+
+
+
+<center>
+<div class="element-animation"> 
+<a href="https://2gis.kz/semey/geo/70000001051886713"><img src="C:\Users\Acer\Desktop\madi_invite" style="width: 100%; margin-top: 40px;margin-bottom: 20px;"></a>
+</div></center>
+
+
+
+
+
+
+
+<center>
+<div class="element-animation"> <a href="https://t.me/+wal8MB2uJCdjMmQ6">
+<img src="dht.jpg" style="width: 100%;margin-top: 50px; margin-bottom: 25px;"  ></a>
+
+</div></center>
+
+
+
+
+
+
+
+
+
+<center style="margin-top: 0px;">
+<form class="transparent"method="post" id="form">
+<div class="form-inner">
+  
+ <div class="radio-group" required>
+                    <input type="radio" id="question1_yes" name="name" value="Иә барамын/барамыз" required>
+                    <label for="question1_yes" >Иә барамын/барамыз</label><br>
+                    <input type="radio" id="question1_yes" name="name" value="Жұбайыммен барамын" required>
+                    <label for="question1_yes" >Жұбайыммен барамын</label><br>
+                    <input type="radio" id="question1_no" name="name" value="Бара алмаймын" required>
+                    <label for="question1_no">Бара алмаймын</label>
+                </div>
+    <textarea required
+          name="message"
+          maxlength="100"
+          id="message"
+          cols="30"
+          rows="4"
+          placeholder="Есіміңізді жазыңыз"
+         
+        ></textarea>
+<input  type="submit" value="Жіберу" style="color:white;" class="btn">
+</div>
+</form></center>
+
+
+
+
+
+
+
+
+
+<img src="lili.jpg" style="width:100%; margin-top:80px; ">
+
+
+
+
+<!-- Модальное окно -->
+<div id="musicModal" class="modal">
+    <div class="modal-content">
+        <img src="liul.jpg" class="kk">
+        <button id="playMusic" style="color: black;">Шақыртуды ашу</button>
+    </div>
+</div>
+
+<audio id="backgroundMusic" loop>
+    <source src="Kuandyk-Rahym-Uilenem.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает воспроизведение музыки.
+</audio>
+
+<script>
+    // Получаем модальное окно, кнопку и аудио
+    var modal = document.getElementById("musicModal");
+    var playButton = document.getElementById("playMusic");
+    var audio = document.getElementById("backgroundMusic");
+
+    // При нажатии на кнопку включаем музыку и закрываем модальное окно
+    playButton.onclick = function() {
+        audio.play();
+        closeModal();
+    };
+
+    // Функция для закрытия модального окна и разблокировки сайта
+    function closeModal() {
+        modal.style.display = "none";  // Скрываем модальное окно
+        document.body.classList.remove("modal-open"); // Включаем прокрутку
+    }
+</script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      var elements = document.querySelectorAll(".fade-in");
+      elements.forEach(function(element) {
+        observer.observe(element);
+      });
+    });
+  </script>
+
+
+<script>
+    
+
+    const URL_APP = "https://script.google.com/macros/s/AKfycbztU4v1zgv9FbeAEh8YihhSuijWEumqlAd_LXhTqiZ6WEBn-NJHwy8thK2N5mHm054o/exec";
+
+const form = document.querySelector("#form");
+
+form.action = URL_APP;
+
+function isFilled(details) {
+  const {name, message } = details;
+  if (!name || !message) return false;
+  return true;
+}
+
+form.addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+
+  const name = document.querySelector("[name=name]:checked");
+  const message = document.querySelector("[name=message]");
+
+  let details = {
+    name: name ? name.value : '',
+    message: message.value.trim(),
+  };
+
+
+  let formBody = [];
+  for (let property in details) {
+    let encodedKey = encodeURIComponent(property);
+    let encodedValue = encodeURIComponent(details[property]);
+    formBody.push(encodedKey + "=" + encodedValue);
+  }
+  formBody = formBody.join("&");
+
+ name.value = '';
+  message.value = '';
+  alert('Жауабыңызға рахмет!');
+
+  // Деректерді серверге жіберу
+  fetch(URL_APP, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+    },
+    mode: "no-cors",
+    body: formBody,
+  }).catch((err) => {
+    console.error('Error:', err);
+    alert("Ошибка!");
+  }).finally(() => {
+    submitButton.disabled = false; // Жіберу батырмасын қайта қосу
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     function onEntry(entry) { 
+      entry.forEach(change => { 
+        if (change.isIntersecting) { 
+         change.target.classList.add('element-show'); 
+         
+        } 
+      }); 
+    } 
+        let options = { 
+      threshold: [0.5] }; 
+    let observer = new IntersectionObserver(onEntry, options); 
+    let elements = document.querySelectorAll('.element-animation'); 
+     
+    for (let elm of elements) { 
+      observer.observe(elm); 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    function updateCountdown() {
+        const endDate = new Date("October 27, 2025 17:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+
+        if (distance < 0) {
+            clearInterval(timerInterval);
+            document.getElementById("days").innerText = "00";
+            document.getElementById("hours").innerText = "00";
+            document.getElementById("minutes").innerText = "00";
+            document.getElementById("seconds").innerText = "00";
+        }
+    }
+
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+});
+
+
+
+</script>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https: //fonts.googleapis.com/css2?family= Piazzolla :wght@100 & display=swap" rel="stylesheet">
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" async></script>
+</body>
+</html>
